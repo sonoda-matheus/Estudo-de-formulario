@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, input, button, select, textarea{/* font famliy geralmente se coloca assim, para se tornar universal e nao somento no body*/
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body{
+    background-color: #e5e5e5;
+}
+body::before{
+    content: '';
+    width: 100%;
+    height: 360px;
+    display: block;/*torna o display block, fazendo com q ele empurre todos os elementos seguites descolarem pra baixo*/
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;/*faz com q a camada fique por traz da camada superior*/
+    background: black;
+}
+
+.page{
+    width: 736px;
+    margin: 0 auto;
+}
+
+header{
+    width: 319px;
+    margin-top: 74px;
+}
+
+header h1{
+    font-family: 'Archivo', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color:white;
+
+    margin-bottom: 24px;
+}
+header p{
+    font-size: 16px;
+    line-height: 26px;
+    
+    color: #42d3ff
+}
+
+form{
+    margin-top: 38px;
+    background: #fafafc;
+    border-radius:  8px;
+    min-height: 300px;
+    padding: 64px;
+}
+fieldset{
+    border: none;
+
+}
+
+.fieldset-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+fieldset legend{
+    font-family: 'Archivo';
+    font-weight: 600;/*nao existe font weight semi bold, por isso escrevemos 600*/
+    font-size: 24px;
+    line-height: 34px;
+
+    width: 100%;
+    padding-bottom: 16px;/*para descer a borda tem q usar o padding, para preencher o espaço*/
+    border-bottom: 1px solid #e6e6f0;
+}
+
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wrapper label{
+    font-size: 14px;
+    line-height: 24px;
+    color: #4e4958;
+
+    margin-bottom: 8px;
+    
+}
+.input-wrapper label span{
+    margin-left: 12px;
+    font-size: 12px;
+    line-height: 20px;
+
+    color: #c1bccc;
+}
+
+.input-wrapper input{
+    background: #fafafc;
+
+    border: 1px solid #e6e6f0;
+    border-radius: 8px;
+
+    height: 56px;
+    padding: 0 24px;
+
+    font-size: 16px;
+    line-height: 26px;
+    color: #c1bccc;
+}
